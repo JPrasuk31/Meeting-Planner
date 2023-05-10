@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Rooms {% endblock %}
+{% block content %}
+
+    The list of all rooms are:
+    {% for room in rooms %}
+  <ul>
+      <li>
+     <strong>{{room.name}}</strong> is located on the floor <strong>{{room.floor}}</strong>
+    and its room number is <strong>{{room.room_number}}</strong>
+      </li>
+  </ul>
+    {% endfor %}
+
+{% endblock %}
